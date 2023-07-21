@@ -6,9 +6,11 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="initial-scale=0.7, maximum-scale=0.7">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 <link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 
@@ -83,8 +85,28 @@ footer a,
 
 
 .container10 {
-  width: 980px;
+  width: 71.4%; /* 80% width for all screen sizes by default */
   margin: 0 auto;
+}
+
+/* Media query for mobile devices with a maximum screen width of 768px */
+@media screen and (max-width: 768px) {
+  .container10 {
+    width: 96%; /* Change the width to 90% for mobile devices */
+  }
+}
+	
+.articles-list img {
+  width: 100%; /* Set the width to 100% of its parent container's width */
+  height: 200px; /* Set a fixed height for non-mobile devices */
+}
+
+/* Media query for mobile devices with a maximum screen width of 768px */
+@media screen and (max-width: 768px) {
+  .articles-list img {
+	  width: 122px;
+    height: 80px; /* Set height to auto for mobile devices */
+  }
 }
 
 
@@ -315,15 +337,22 @@ header a {
 }
 
 .share-buttons a {
-  display: inline-flex;
-  align-items: center;
-  padding: 10px 20px;
-  margin: 5px;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  font-size: 16px;
+  width: 22%; /* Set the width of each link to 25% of the parent container's width */
+  padding: 10px; /* Add padding to provide some spacing between links */
+  font-size: 1em; /* Use relative font size for better responsiveness */
+  text-align: center; /* Center the text inside the links */
+  text-decoration: none; /* Remove underlines from the links */
+  color: #fff; /* Set the color of the link text */
 }
+
+/* Media query for adjusting link size on smaller screens */
+@media screen and (max-width: 768px) {
+  .share-buttons a {
+    width: 40%; /* Change the width to 40% for smaller screens */
+    font-size: 0.6em; /* Decrease font size for smaller screens */
+  }
+}
+	  
 
 .share-buttons a i {
   margin-right: 10px;
@@ -351,6 +380,13 @@ header a {
   display: flex;
   justify-content: center;
   align-items: center;
+ max-width: 100%; /* Set the maximum width to 100% of its parent container's width */
+  margin: 0 auto;
+}
+
+.image-container img {
+  width: 100%; /* Set the width of the image to 100% of its parent container's width */
+  height: auto; /* Automatically adjust the height while maintaining the aspect ratio */
 }
 
 .image-credit {
@@ -478,7 +514,7 @@ header a {
   </div>
 
 <div class="image-container">
-  <img src="https://pbs.twimg.com/media/F1kWHsjWAAAHhT7?format=jpg&name=large" alt="West Ham celebrating a goal" width="815" height="505">
+  <img src="https://pbs.twimg.com/media/F1kWHsjWAAAHhT7?format=jpg&name=large" alt="West Ham celebrating a goal">
 
 </div>
 
@@ -521,7 +557,7 @@ At PSV he played a 4-2-3-1 system that dominated the ball much more than the cur
 <br><br>
 
 <div class="image-container">
-  <img src="https://pbs.twimg.com/media/F1kYfKVWYAEfBo7?format=jpg&name=medium" alt="Team plot chart (possession vs average passes per possession), west ham, psv eindhoven" width="920" height="605">
+  <img src="https://pbs.twimg.com/media/F1kYfKVWYAEfBo7?format=jpg&name=medium" alt="Team plot chart (possession vs average passes per possession), west ham, psv eindhoven">
   <a href="https://datamb.football/plotteam" target="_blank" class="image-credit">Plot teams</a>
 
 </div>
@@ -550,7 +586,7 @@ The Frenchman was decent at best this season, and when looking at his numbers wh
 
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1kvKDQWIAM4U2S?format=png&name=900x900
-" alt="Kurt Zouma stats radar chart data comparison" width="698" height="605">
+" alt="Kurt Zouma stats radar chart data comparison">
   <a href="https://datamb.football/centrebacks" target="_blank" class="image-credit">Compare CBs</a>
 </div>
 
@@ -568,7 +604,7 @@ Don’t get me wrong, Alphonse Areola is still a very good goalkeeper, but he is
 
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1kvV4cX0AATSBg?format=png&name=900x900
-" alt="Alphonse Aréola stats radar chart data comparison" width="698" height="653">
+" alt="Alphonse Aréola stats radar chart data comparison">
   <a href="https://datamb.football/keepers" target="_blank" class="image-credit">Compare GKs</a>
 </div>
 <br><br><br>
@@ -599,7 +635,7 @@ The Frenchman has been on top of his game for the past a couple years. Started a
 
 
 <div class="image-container">
-  <img src="https://pbs.twimg.com/media/F1kvdYSX0AAr6Hu?format=png&name=900x900" alt="Alban Lafont vs Alphonse Aréola" width="681" height="605">
+  <img src="https://pbs.twimg.com/media/F1kvdYSX0AAr6Hu?format=png&name=900x900" alt="Alban Lafont vs Alphonse Aréola">
   <a href="https://datamb.football/keepers" target="_blank" class="image-credit">Compare GKs</a>
 
 </div>
@@ -618,7 +654,7 @@ This season he was relegated with Southampton, but that is now a show of his per
 
 
 <div class="image-container">
-  <img src="https://pbs.twimg.com/media/F1kvvL1WIAQdgn6?format=jpg&name=medium" alt="CB plot chart, defensive duels, zouma, bella-kotchap" width="920" height="605">
+  <img src="https://pbs.twimg.com/media/F1kvvL1WIAQdgn6?format=jpg&name=medium" alt="CB plot chart, defensive duels, zouma, bella-kotchap">
   <a href="https://datamb.football/plotcb" target="_blank" class="image-credit">Plot CBs</a>
 
 </div>
@@ -626,7 +662,7 @@ This season he was relegated with Southampton, but that is now a show of his per
 
 
 <div class="image-container">
-  <img src="https://pbs.twimg.com/media/F1kvlM_WYAAUIUR?format=png&name=900x900" alt="Kurt Zouma vs Armel Bella-Kotchap" width="681" height="605">
+  <img src="https://pbs.twimg.com/media/F1kvlM_WYAAUIUR?format=png&name=900x900" alt="Kurt Zouma vs Armel Bella-Kotchap">
   <a href="https://datamb.football/centrebacks" target="_blank" class="image-credit">Compare CBs</a>
 
 </div>
@@ -643,7 +679,7 @@ The defensive midfielder was one of Leeed’s better players in an overall bad s
 
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1kwoFQWIAQaXQV?format=png&name=small
-" alt="Tyler Adams stats radar chart data comparison" width="698" height="653">
+" alt="Tyler Adams stats radar chart data comparison">
   <a href="https://datamb.football/midfielders" target="_blank" class="image-credit">Compare midfielders</a>
 </div>
 <br><br><br>
@@ -663,7 +699,7 @@ Sassuolo’s talisman was at some point tipped to stay at I Neroverdi his whole 
 
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1kwZ99WcAIXxSr?format=png&name=small
-" alt="Domenico Berardi stats radar chart data comparison" width="698" height="653">
+" alt="Domenico Berardi stats radar chart data comparison">
   <a href="https://datamb.football/wingers" target="_blank" class="image-credit">Compare wingers</a>
 </div>
 <br><br><br>
@@ -676,7 +712,7 @@ Van Nistelrooy knows Bakayoko from his time at PSV and the now Belgium goal scor
 
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1kweCCWIAQqKHo?format=png&name=small
-" alt="Johan Bakayoko stats radar chart data comparison" width="698" height="653">
+" alt="Johan Bakayoko stats radar chart data comparison">
   <a href="https://datamb.football/wingers" target="_blank" class="image-credit">Compare wingers</a>
 </div>
 <br><br><br>
@@ -688,7 +724,7 @@ Striker: Vangelis Pavlidis - €18 million
 <br><br>
 <div class="image-container">
   <img src="https://pbs.twimg.com/media/F1kwODKWIAAWxUD?format=png&name=small
-" alt="Vangelis Pavlidis stats radar chart data comparison" width="698" height="653">
+" alt="Vangelis Pavlidis stats radar chart data comparison">
   <a href="https://datamb.football/strikers" target="_blank" class="image-credit">Compare STs</a>
 </div>
 <br><br>
@@ -720,18 +756,18 @@ Striker: Vangelis Pavlidis - €18 million
   <ul class="articles-list">
     <li>
       <a href="http://datamb.football/teonelmessi">
-        <img src="https://i.imgur.com/wUOD8Hj.png" alt="Articles by Teonel Messi" width="292" height="160">         <span class="article-title">Articles by Teonel Messi</span>
+        <img src="https://i.imgur.com/wUOD8Hj.png" alt="by Teonel Messi">         <span class="article-title">Teonel Messi</span>
 
       </a> 
     </li>
     <li>
       <a href="http://datamb.football/midfielders">
-        <img src="https://i.imgur.com/p43wTxg.png" alt="Compare midfielders" width="292" height="160"><span class="article-title">Compare midfielders</span>
+        <img src="https://i.imgur.com/p43wTxg.png" alt="Compare midfielders"><span class="article-title">Compare midfielders</span>
       </a>
     </li>
     <li>
       <a href="http://datamb.football/mount-man-united-data-analysis">
-        <img src="https://i.imgur.com/XXtt5nK.png" alt="Mason Mount : Data Analysis" width="270" height="160"><span class="article-title">Mason Mount : Data Analysis</span>
+        <img src="https://i.imgur.com/XXtt5nK.png" alt="Mason Mount : Data Analysis"><span class="article-title">Mason Mount : Data Analysis</span>
       </a>
     </li>
   </ul>
